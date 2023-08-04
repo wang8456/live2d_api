@@ -6,7 +6,28 @@
       "textures/texture_00.png"
     ],
     "Physics": "lafei_4.physics3.json",
+    "layout":{ // 新增 调整模型位置及长宽
+        "center_x": 0,
+        "center_y": -0.16,
+        "width": 1.8,
+        "height": 2.5
+    },
+    "hit_areas_custom":{ // 新增 模型的点击感应位置
+        "head_x":[-0.4, 0.9], // 头部判定
+        "head_y":[0.4, 0.6],
+        "body_x":[-0.4, 0.5], // 身体判定
+        "body_y":[0.4, -0.9]
+    },
     "Motions": {
+        "idle":[ // 空闲时动作
+            {"file":"action/idle.mtn"}
+        ],
+        "flick_head":[ // 点击头部时动作
+            {"file":"action/fumaozi.mtn"}
+        ],
+        "tap_body":[ // 点击身体时动作
+            {"file":"action/sikao.mtn"}
+        ]
       "": [
         {
           "File": "motions/mission.motion3.json"
